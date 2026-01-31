@@ -2,95 +2,143 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* CDSC Nepal IPO Checker Design System
+   Color Palette: Professional navy blues with gold accents
+   Inspired by financial/fintech apps with Nepal cultural touches
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core backgrounds - light theme */
+    --background: 210 25% 97%;
+    --foreground: 215 35% 15%;
 
+    /* Cards and elevated surfaces */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 215 35% 15%;
 
+    /* Popovers and dropdowns */
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 215 35% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Deep Navy Blue */
+    --primary: 210 60% 25%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Soft slate */
+    --secondary: 210 20% 92%;
+    --secondary-foreground: 210 35% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted surfaces */
+    --muted: 210 20% 94%;
+    --muted-foreground: 210 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Gold/Amber for Nepal theme */
+    --accent: 43 85% 50%;
+    --accent-foreground: 215 35% 15%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Semantic colors */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Success - Emerald Green */
+    --success: 152 60% 42%;
+    --success-foreground: 0 0% 100%;
 
-    --radius: 0.5rem;
+    /* Warning - Warm amber */
+    --warning: 38 92% 50%;
+    --warning-foreground: 215 35% 15%;
 
-    --sidebar-background: 0 0% 98%;
+    /* Info - Sky blue */
+    --info: 199 89% 48%;
+    --info-foreground: 0 0% 100%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Borders and inputs */
+    --border: 210 20% 88%;
+    --input: 210 20% 88%;
+    --ring: 210 60% 25%;
 
-    --sidebar-primary: 240 5.9% 10%;
+    --radius: 0.625rem;
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    /* Sidebar - Nepal-inspired deep tones */
+    --sidebar-background: 215 45% 18%;
+    --sidebar-foreground: 210 30% 90%;
+    --sidebar-primary: 43 85% 55%;
+    --sidebar-primary-foreground: 215 45% 15%;
+    --sidebar-accent: 215 40% 25%;
+    --sidebar-accent-foreground: 210 30% 90%;
+    --sidebar-border: 215 40% 25%;
+    --sidebar-ring: 43 85% 55%;
 
-    --sidebar-accent: 240 4.8% 95.9%;
+    /* Custom gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(210 60% 25%), hsl(215 55% 35%));
+    --gradient-accent: linear-gradient(135deg, hsl(43 85% 50%), hsl(38 90% 55%));
+    --gradient-success: linear-gradient(135deg, hsl(152 60% 42%), hsl(158 55% 50%));
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 25% 98%));
 
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(215 35% 15% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(215 35% 15% / 0.08), 0 2px 4px -2px hsl(215 35% 15% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(215 35% 15% / 0.08), 0 4px 6px -4px hsl(215 35% 15% / 0.06);
+    --shadow-glow: 0 0 20px hsl(43 85% 50% / 0.15);
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 215 45% 8%;
+    --foreground: 210 30% 92%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 215 40% 12%;
+    --card-foreground: 210 30% 92%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 215 40% 12%;
+    --popover-foreground: 210 30% 92%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 43 85% 55%;
+    --primary-foreground: 215 45% 10%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 215 35% 18%;
+    --secondary-foreground: 210 30% 85%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 215 35% 16%;
+    --muted-foreground: 210 20% 55%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 43 85% 55%;
+    --accent-foreground: 215 45% 10%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --success: 152 55% 50%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 85% 55%;
+    --warning-foreground: 215 35% 10%;
+
+    --info: 199 80% 55%;
+    --info-foreground: 0 0% 100%;
+
+    --border: 215 35% 20%;
+    --input: 215 35% 20%;
+    --ring: 43 85% 55%;
+
+    --sidebar-background: 215 50% 8%;
+    --sidebar-foreground: 210 30% 90%;
+    --sidebar-primary: 43 85% 55%;
+    --sidebar-primary-foreground: 215 45% 10%;
+    --sidebar-accent: 215 45% 15%;
+    --sidebar-accent-foreground: 210 30% 90%;
+    --sidebar-border: 215 40% 18%;
+    --sidebar-ring: 43 85% 55%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(43 85% 55%), hsl(38 90% 60%));
+    --gradient-accent: linear-gradient(135deg, hsl(215 55% 25%), hsl(210 50% 30%));
+    --gradient-success: linear-gradient(135deg, hsl(152 55% 50%), hsl(158 50% 55%));
+    --gradient-card: linear-gradient(180deg, hsl(215 40% 12%), hsl(215 42% 10%));
+
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.2);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.3), 0 2px 4px -2px hsl(0 0% 0% / 0.2);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.35), 0 4px 6px -4px hsl(0 0% 0% / 0.25);
+    --shadow-glow: 0 0 25px hsl(43 85% 55% / 0.2);
   }
 }
 
@@ -100,6 +148,123 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  /* Status badges */
+  .badge-allotted {
+    @apply bg-success/15 text-success border border-success/30 px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  
+  .badge-not-allotted {
+    @apply bg-destructive/15 text-destructive border border-destructive/30 px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  
+  .badge-pending {
+    @apply bg-warning/15 text-warning border border-warning/30 px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  
+  .badge-error {
+    @apply bg-muted text-muted-foreground border border-border px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  /* Stats card */
+  .stats-card {
+    @apply relative overflow-hidden rounded-xl border bg-card p-5 shadow-sm transition-all hover:shadow-md;
+  }
+  
+  .stats-card::before {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity;
+    background: var(--gradient-accent);
+  }
+  
+  .stats-card:hover::before {
+    @apply opacity-5;
+  }
+
+  /* Glass morphism effect */
+  .glass {
+    @apply bg-card/80 backdrop-blur-md border border-border/50;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+
+  /* Progress bar track */
+  .progress-track {
+    @apply h-3 rounded-full bg-secondary overflow-hidden;
+  }
+  
+  .progress-fill {
+    @apply h-full rounded-full transition-all duration-500 ease-out;
+    background: var(--gradient-success);
+  }
+
+  /* Dropzone */
+  .dropzone {
+    @apply border-2 border-dashed border-border rounded-xl p-8 text-center transition-all cursor-pointer;
+    @apply hover:border-primary/50 hover:bg-primary/5;
+  }
+  
+  .dropzone-active {
+    @apply border-primary bg-primary/10 scale-[1.02];
+  }
+
+  /* Scrollbar styling */
+  .custom-scrollbar::-webkit-scrollbar {
+    @apply w-2;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-muted rounded-full;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/30 rounded-full;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/50;
+  }
+}
+
+@layer utilities {
+  .animate-pulse-soft {
+    animation: pulse-soft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  @keyframes pulse-soft {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s linear infinite;
+    background: linear-gradient(90deg, transparent, hsl(var(--primary) / 0.1), transparent);
+    background-size: 200% 100%;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
   }
 }
